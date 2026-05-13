@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideNest - Rent a Vehicle</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-main">
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">RideNest</a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="btn-primary">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Campus-ready rentals</p>
+                    <h1>Move across the city without losing momentum</h1>
+                    <p>Search trusted campus-friendly cars and bikes, compare pickup cities, and book in minutes from a cleaner local dashboard experience.</p>
+                    <div class="hero-chip-row">
+                        <span class="hero-chip">Student-friendly bookings</span>
+                        <span class="hero-chip">Agency-managed fleets</span>
+                        <span class="hero-chip">Pay online or on pickup</span>
+                    </div>
+                </div>
+                <div class="hero-search-panel">
+                    <p class="panel-kicker">Start your search</p>
+                    <form class="search-form search-form-hero" id="search-form">
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="Enter a city or location">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vehicle-type">Vehicle Type</label>
+                            <select id="vehicle-type">
+                                <option value="">All Types</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Hatchback">Hatchback</option>
+                                <option value="Bike">Bike</option>
+                                <option value="Truck">Truck</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Search</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="landing-feature-grid">
+            <article class="landing-feature-card">
+                <p class="eyebrow">For renters</p>
+                <h3>Track every ride</h3>
+                <p>Use the upgraded user dashboard to review future pickups, trip history, spending, and booking trends.</p>
+            </article>
+            <article class="landing-feature-card">
+                <p class="eyebrow">For agencies</p>
+                <h3>Operate like a control room</h3>
+                <p>Monitor listings, booking flow, top vehicles, location coverage, and live activity in one place.</p>
+            </article>
+            <article class="landing-feature-card">
+                <p class="eyebrow">Built for speed</p>
+                <h3>One local app</h3>
+                <p>No extra frontend server is needed. Run once, open the browser, and move through the full booking flow quickly.</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>

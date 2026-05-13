@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Payment - RideNest</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-white">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html" class="logo-lightbg">RideNest</a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="search.html">Cancel Payment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <div class="payment-card">
+                <h2>Pay Invoice</h2>
+                <div class="payment-logos">
+                    <img src="assets/visa.png" alt="Visa" class="payment-logo">
+                    <img src="assets/mastercard.png" alt="Mastercard" class="payment-logo">
+                    <img src="assets/amex.png" alt="American Express" class="payment-logo">
+                    <img src="assets/discover.png" alt="Discover" class="payment-logo">
+                </div>
+
+                <div class="payment-amount-display">
+                    Payment amount
+                    <span class="price" id="mock-total-price">Rs. 0</span>
+                </div>
+
+                <form class="payment-form">
+                    <div class="form-group-full">
+                        <label for="card-name">Name on card</label>
+                        <input type="text" id="card-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group-full">
+                        <label for="card-number">Card number</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                    </div>
+                    <div class="form-group-split">
+                        <div class="form-group-half">
+                            <label for="expiry-date">Expiry date</label>
+                            <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group-half">
+                            <label for="security-code">Security code</label>
+                            <input type="text" id="security-code" placeholder="CVC" required>
+                        </div>
+                    </div>
+                    <div class="form-group-full">
+                        <label for="zip-code">ZIP/Postal code</label>
+                        <input type="text" id="zip-code" placeholder="110001" required>
+                    </div>
+
+                    <button type="submit" class="btn-primary" id="confirm-payment-btn">
+                        Pay <span id="button-total-price">Rs. 0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/payment.js"></script>
+</body>
+</html>

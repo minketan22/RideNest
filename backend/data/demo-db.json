@@ -1,0 +1,167 @@
+{
+  "users": [
+    {
+      "_id": "user-demo-1",
+      "username": "Aarav Student",
+      "email": "user@ridenest.demo",
+      "password": "$2b$10$U.r98BFQIsS7yiD6AJJEIOQJlibU3VCEWPcsHLen0kOU9.d5vk8Vm",
+      "phone": "9876543210",
+      "createdAt": "2026-05-10T08:07:53.359Z",
+      "updatedAt": "2026-05-10T08:07:53.371Z"
+    },
+    {
+      "_id": "user-6ad78550-5b59-4e63-9583-7a13e7cba410",
+      "username": "minketan",
+      "email": "minketantripathi7858@gmail.com",
+      "password": "$2b$10$Fo.izufxnLcj0dRy4eUfwOeH.9v8d9yRQt42MtsX4..x//abi0X8y",
+      "phone": "07858913382",
+      "updatedAt": "2026-05-10T09:28:58.074Z",
+      "createdAt": "2026-05-10T09:28:58.074Z"
+    }
+  ],
+  "agencies": [
+    {
+      "_id": "agency-demo-1",
+      "agencyName": "RideNest Fleet",
+      "email": "agency@ridenest.demo",
+      "password": "$2b$10$U.r98BFQIsS7yiD6AJJEIOQJlibU3VCEWPcsHLen0kOU9.d5vk8Vm",
+      "address": "North Campus, Delhi",
+      "createdAt": "2026-05-10T08:07:53.371Z",
+      "updatedAt": "2026-05-10T08:07:53.371Z"
+    },
+    {
+      "_id": "agency-61baf765-82e3-40b4-a015-dd043f45af64",
+      "agencyName": "Aditya gadi wala",
+      "email": "minketantripathi7858@gmail.com",
+      "password": "$2b$10$Nh8q9Tjd92AQHmJZpIn4DOHR1S33m89XNH0ia0I8JO2ReORw56nGa",
+      "address": "ambala",
+      "updatedAt": "2026-05-10T09:30:31.382Z",
+      "createdAt": "2026-05-10T09:30:31.382Z"
+    }
+  ],
+  "vehicles": [
+    {
+      "_id": "vehicle-demo-1",
+      "agencyId": "agency-demo-1",
+      "modelName": "Honda City",
+      "type": "Sedan",
+      "location": "Delhi",
+      "image": "https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=1200&q=80",
+      "pricePerDay": 2200,
+      "description": "Comfortable sedan for city rides and airport pickups.",
+      "createdAt": "2026-05-10T08:07:53.371Z",
+      "updatedAt": "2026-05-10T08:07:53.371Z"
+    },
+    {
+      "_id": "vehicle-demo-2",
+      "agencyId": "agency-demo-1",
+      "modelName": "Hyundai Creta",
+      "type": "SUV",
+      "location": "Noida",
+      "image": "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80",
+      "pricePerDay": 3200,
+      "description": "Spacious SUV for family trips and weekend travel.",
+      "createdAt": "2026-05-10T08:07:53.371Z",
+      "updatedAt": "2026-05-10T08:07:53.371Z"
+    },
+    {
+      "_id": "vehicle-demo-3",
+      "agencyId": "agency-demo-1",
+      "modelName": "Royal Enfield Classic 350",
+      "type": "Bike",
+      "location": "Gurugram",
+      "image": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80",
+      "pricePerDay": 1400,
+      "description": "A dependable bike for solo commutes and quick rides.",
+      "createdAt": "2026-05-10T08:07:53.371Z",
+      "updatedAt": "2026-05-10T08:07:53.371Z"
+    },
+    {
+      "_id": "vehicle-c14eaa1d-8fc0-495e-b470-08ab2af06a12",
+      "agencyId": "agency-61baf765-82e3-40b4-a015-dd043f45af64",
+      "modelName": "Honda City",
+      "type": "Sedan",
+      "location": "mullana",
+      "pricePerDay": 1000,
+      "description": "Good condition, AC, Complimentary",
+      "image": "http://localhost:3000/uploads/1778405575916.jpg",
+      "updatedAt": "2026-05-10T09:32:55.986Z",
+      "createdAt": "2026-05-10T09:32:55.986Z"
+    },
+    {
+      "_id": "vehicle-a6c77971-fe03-4c9b-91a4-abfd64ba0e9b",
+      "agencyId": "agency-61baf765-82e3-40b4-a015-dd043f45af64",
+      "modelName": "Mahindra Scorpio N",
+      "type": "SUV",
+      "location": "mullana",
+      "pricePerDay": 2000,
+      "description": "SUV car in best price , with some complimentary",
+      "image": "http://localhost:3000/uploads/1778405728401.avif",
+      "updatedAt": "2026-05-10T09:35:28.410Z",
+      "createdAt": "2026-05-10T09:35:28.410Z"
+    },
+    {
+      "_id": "vehicle-3b12222a-e599-41be-a7b4-9cc96e755b3d",
+      "agencyId": "agency-61baf765-82e3-40b4-a015-dd043f45af64",
+      "modelName": "XUV 7XO",
+      "type": "SUV",
+      "location": "yamunanagar",
+      "pricePerDay": 2000,
+      "image": "http://localhost:3000/uploads/1778405795004.avif",
+      "updatedAt": "2026-05-10T09:36:35.007Z",
+      "createdAt": "2026-05-10T09:36:35.007Z"
+    },
+    {
+      "_id": "vehicle-0cbc4ae7-fe51-440b-ad63-1856d311b077",
+      "agencyId": "agency-61baf765-82e3-40b4-a015-dd043f45af64",
+      "modelName": "XUV 3XO",
+      "type": "SUV",
+      "location": "AMBALA",
+      "pricePerDay": 2799,
+      "description": "GOOD CONDITION",
+      "image": "http://localhost:3000/uploads/1778405874399.avif",
+      "updatedAt": "2026-05-10T09:37:54.415Z",
+      "createdAt": "2026-05-10T09:37:54.415Z"
+    },
+    {
+      "_id": "vehicle-5593873c-14c2-480d-9944-38ed13fd8941",
+      "agencyId": "agency-61baf765-82e3-40b4-a015-dd043f45af64",
+      "modelName": "Honda City",
+      "type": "Sedan",
+      "location": "yamunanagar",
+      "pricePerDay": 2500,
+      "description": "GOOD",
+      "image": "http://localhost:3000/uploads/1778408323459.jpg",
+      "updatedAt": "2026-05-10T10:18:43.474Z",
+      "createdAt": "2026-05-10T10:18:43.474Z"
+    }
+  ],
+  "bookings": [
+    {
+      "_id": "booking-7173804a-44f1-4d4c-bda8-3798df723677",
+      "userId": "user-6ad78550-5b59-4e63-9583-7a13e7cba410",
+      "vehicleId": "vehicle-c14eaa1d-8fc0-495e-b470-08ab2af06a12",
+      "agencyId": "agency-61baf765-82e3-40b4-a015-dd043f45af64",
+      "startDate": "2026-05-12",
+      "endDate": "2026-05-13",
+      "pickupTime": "13:06",
+      "totalPrice": 1000,
+      "status": "Confirmed",
+      "updatedAt": "2026-05-10T10:03:55.108Z",
+      "createdAt": "2026-05-10T10:03:55.108Z"
+    },
+    {
+      "_id": "booking-7aef2537-079a-49e5-9a8a-4b426b1842ea",
+      "userId": "user-6ad78550-5b59-4e63-9583-7a13e7cba410",
+      "vehicleId": "vehicle-c14eaa1d-8fc0-495e-b470-08ab2af06a12",
+      "agencyId": "agency-61baf765-82e3-40b4-a015-dd043f45af64",
+      "startDate": "2026-08-07",
+      "endDate": "82026-05-20",
+      "pickupTime": "04:59",
+      "totalPrice": 29219321000,
+      "status": "Pending",
+      "updatedAt": "2026-05-10T10:06:10.264Z",
+      "createdAt": "2026-05-10T10:06:10.264Z"
+    }
+  ]
+}

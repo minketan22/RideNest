@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency Dashboard - RideNest</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-dashboard">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">RideNest</a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="dashboard-hero">
+                <div>
+                    <p class="eyebrow">Agency Dashboard</p>
+                    <h2>Run your fleet like a live operations board</h2>
+                    <p class="dashboard-intro">Monitor listings, watch incoming bookings, and add fresh vehicles without losing sight of the bigger picture.</p>
+                </div>
+                <div class="dashboard-actions">
+                    <a href="#add-vehicle-form" class="btn-primary">Add New Listing</a>
+                </div>
+            </section>
+
+            <section class="stats-grid" id="agency-stats-grid">
+                <article class="stat-card">
+                    <span class="stat-label">Active Listings</span>
+                    <strong class="stat-value" id="agency-total-vehicles">0</strong>
+                    <span class="stat-meta">Vehicles currently visible to renters</span>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-label">Total Bookings</span>
+                    <strong class="stat-value" id="agency-total-bookings">0</strong>
+                    <span class="stat-meta">Reservations across your fleet</span>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-label">Confirmed Revenue</span>
+                    <strong class="stat-value" id="agency-confirmed-revenue">Rs. 0</strong>
+                    <span class="stat-meta">Bookings already confirmed</span>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-label">Coverage</span>
+                    <strong class="stat-value" id="agency-top-location">-</strong>
+                    <span class="stat-meta">Your strongest active location</span>
+                </article>
+            </section>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="section-header">
+                        <div>
+                            <p class="eyebrow">Listings</p>
+                            <h3>Add a New Vehicle</h3>
+                        </div>
+                    </div>
+                    <form class="auth-form" id="add-vehicle-form">
+                        <div class="form-group-full">
+                            <label for="modelName">Model Name</label>
+                            <input type="text" id="modelName" required>
+                        </div>
+                        <div class="form-group-full">
+                            <label for="type">Vehicle Type</label>
+                            <select id="type" required>
+                                <option value="Sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Hatchback">Hatchback</option>
+                                <option value="Bike">Bike</option>
+                                <option value="Truck">Truck</option>
+                            </select>
+                        </div>
+                        <div class="form-group-full">
+                            <label for="location">Pickup Location / City</label>
+                            <input type="text" id="location" placeholder="e.g., Delhi, Noida, Gurugram" required>
+                        </div>
+                        <div class="form-group-full">
+                            <label for="pricePerDay">Price Per Day (INR)</label>
+                            <input type="number" id="pricePerDay" required>
+                        </div>
+                        <div class="form-group-full">
+                            <label for="image">Vehicle Image</label>
+                            <input type="file" id="image" class="file-input" accept="image/*" required>
+                        </div>
+                        <div class="form-group-full">
+                            <label for="description">Description (Optional)</label>
+                            <textarea id="description" rows="3" placeholder="e.g., Good condition, AC, 5-seater"></textarea>
+                        </div>
+                        <div class="image-preview-panel" id="agency-image-preview-panel">
+                            <p class="image-preview-label">Listing preview</p>
+                            <img src="" alt="Vehicle preview" id="agency-image-preview" class="image-preview hidden">
+                            <p id="agency-image-preview-copy">Choose an image to preview it before publishing.</p>
+                        </div>
+                        <button type="submit" class="btn-primary">Add Vehicle</button>
+                    </form>
+                </div>
+
+                <div class="dashboard-card card-span-2">
+                    <div class="section-header">
+                        <div>
+                            <p class="eyebrow">Fleet Snapshot</p>
+                            <h3>My Vehicle Listings</h3>
+                        </div>
+                    </div>
+                    <div class="dashboard-toolbar">
+                        <div class="toolbar-field toolbar-grow">
+                            <label for="agency-vehicle-search">Search listings</label>
+                            <input type="text" id="agency-vehicle-search" placeholder="Search by model, type, or location">
+                        </div>
+                        <div class="toolbar-field">
+                            <label for="agency-vehicle-filter">Type</label>
+                            <select id="agency-vehicle-filter">
+                                <option value="all">All types</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Hatchback">Hatchback</option>
+                                <option value="Bike">Bike</option>
+                                <option value="Truck">Truck</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="booking-list" id="my-vehicles-list">
+                        </div>
+                </div>
+
+                <div class="dashboard-card card-span-2">
+                    <div class="section-header">
+                        <div>
+                            <p class="eyebrow">Performance</p>
+                            <h3>Revenue and fleet distribution</h3>
+                        </div>
+                    </div>
+                    <div class="insight-grid">
+                        <div class="mini-chart-card">
+                            <p class="mini-chart-title">Top earning vehicles</p>
+                            <div id="agency-top-vehicles" class="distribution-list">
+                                <p class="inline-empty">Your highest performing vehicles will appear here.</p>
+                            </div>
+                        </div>
+                        <div class="mini-chart-card">
+                            <p class="mini-chart-title">Location coverage</p>
+                            <div id="agency-location-distribution" class="bar-chart">
+                                <p class="inline-empty">Add listings in more cities to see your footprint.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="section-header">
+                        <div>
+                            <p class="eyebrow">Utilization</p>
+                            <h3>Fleet readiness</h3>
+                        </div>
+                    </div>
+                    <div class="utilization-panel">
+                        <div class="utilization-ring-wrap">
+                            <div class="utilization-ring" id="agency-utilization-ring">
+                                <div class="utilization-inner">
+                                    <strong id="agency-utilization-rate">0%</strong>
+                                    <span>Booked soon</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="utilization-metrics">
+                            <div class="metric-row">
+                                <span>Vehicles with upcoming bookings</span>
+                                <strong id="agency-booked-vehicles-count">0</strong>
+                            </div>
+                            <div class="metric-row">
+                                <span>Vehicles currently open</span>
+                                <strong id="agency-available-vehicles-count">0</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="section-header">
+                        <div>
+                            <p class="eyebrow">Profile</p>
+                            <h3>Agency notes</h3>
+                        </div>
+                    </div>
+                    <form id="agency-profile-form" class="profile-form">
+                        <div class="form-group-full">
+                            <label for="agency-display-name">Dashboard heading</label>
+                            <input type="text" id="agency-display-name" placeholder="e.g., RideNest Fleet North Hub">
+                        </div>
+                        <div class="form-group-full">
+                            <label for="agency-ops-note">Operations focus</label>
+                            <textarea id="agency-ops-note" rows="3" placeholder="Save a note like weekend demand spike, popular route, or listing priority."></textarea>
+                        </div>
+                        <button type="submit" class="btn-secondary">Save Operations Note</button>
+                        <p id="agency-profile-status" class="profile-status">Your note is stored on this device for quick access.</p>
+                    </form>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="section-header">
+                        <div>
+                            <p class="eyebrow">Live Feed</p>
+                            <h3>Recent activity</h3>
+                        </div>
+                    </div>
+                    <div id="agency-activity-timeline" class="activity-timeline">
+                        <p class="inline-empty">Booking and listing activity will appear here.</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-card card-span-3">
+                    <div class="section-header">
+                        <div>
+                            <p class="eyebrow">Operations</p>
+                            <h3>My Vehicle Bookings</h3>
+                        </div>
+                    </div>
+                    <div class="dashboard-toolbar">
+                        <div class="toolbar-field">
+                            <label for="agency-booking-filter">Show</label>
+                            <select id="agency-booking-filter">
+                                <option value="all">All bookings</option>
+                                <option value="confirmed">Confirmed</option>
+                                <option value="pending">Pending</option>
+                                <option value="upcoming">Upcoming</option>
+                            </select>
+                        </div>
+                        <div class="toolbar-field toolbar-grow">
+                            <label for="agency-booking-search">Search bookings</label>
+                            <input type="text" id="agency-booking-search" placeholder="Search by vehicle, renter, or email">
+                        </div>
+                    </div>
+                    <div class="booking-list" id="agency-booking-list">
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>
+        document.body.classList.add('fade-in');
+    </script>
+</body>
+</html>

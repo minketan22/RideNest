@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - RideNest</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-dashboard">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">RideNest</a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Find a Vehicle</a></li>
+                <li><a href="#" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="dashboard-hero">
+                <div>
+                    <p class="eyebrow">User Dashboard</p>
+                    <h2>Manage your rides in one place</h2>
+                    <p class="dashboard-intro">Track upcoming pickups, review past trips, and jump back into a new search whenever you are ready.</p>
+                </div>
+                <div class="dashboard-actions">
+                    <a href="index.html" class="btn-primary">Book Another Vehicle</a>
+                </div>
+            </section>
+
+            <section class="stats-grid user-stats-grid" id="user-stats-grid">
+                <article class="stat-card">
+                    <span class="stat-label">Total Bookings</span>
+                    <strong class="stat-value" id="user-total-bookings">0</strong>
+                    <span class="stat-meta">All trips you have reserved</span>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-label">Upcoming Trips</span>
+                    <strong class="stat-value" id="user-upcoming-bookings">0</strong>
+                    <span class="stat-meta">Bookings that have not started yet</span>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-label">Confirmed Trips</span>
+                    <strong class="stat-value" id="user-confirmed-bookings">0</strong>
+                    <span class="stat-meta">Paid or confirmed reservations</span>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-label">Planned Spend</span>
+                    <strong class="stat-value" id="user-total-spend">Rs. 0</strong>
+                    <span class="stat-meta">Total value of your current bookings</span>
+                </article>
+            </section>
+
+            <section class="dashboard-grid dashboard-grid-user">
+                <div class="dashboard-card card-span-2">
+                    <div class="section-header">
+                        <div>
+                            <p class="eyebrow">Trip Overview</p>
+                            <h3>Next up for you</h3>
+                        </div>
+                    </div>
+                    <div id="user-next-booking" class="highlight-panel">
+                        <p class="placeholder-copy">Your next confirmed or upcoming ride will appear here.</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="section-header">
+                        <div>
+                            <p class="eyebrow">Quick Tools</p>
+                            <h3>Booking shortcuts</h3>
+                        </div>
+                    </div>
+                    <div class="quick-actions-list">
+                        <a href="index.html" class="quick-action-card">
+                            <strong>Find a vehicle</strong>
+                            <span>Search new rentals across locations and vehicle types.</span>
+                        </a>
+                        <div class="quick-action-card quick-action-static">
+                            <strong id="user-favorite-type">No favorite type yet</strong>
+                            <span>Your most-booked vehicle type will appear here.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="section-header">
+                        <div>
+                            <p class="eyebrow">Profile</p>
+                            <h3>Your travel profile</h3>
+                        </div>
+                    </div>
+                    <form id="user-profile-form" class="profile-form">
+                        <div class="form-group-full">
+                            <label for="user-display-name">Display name</label>
+                            <input type="text" id="user-display-name" placeholder="How should RideNest greet you?">
+                        </div>
+                        <div class="form-group-full">
+                            <label for="user-travel-note">Travel note</label>
+                            <textarea id="user-travel-note" rows="3" placeholder="Save a quick note like preferred pickup time or frequent destination."></textarea>
+                        </div>
+                        <button type="submit" class="btn-secondary">Save Profile Note</button>
+                        <p id="user-profile-status" class="profile-status">Your note is stored on this device for quick access.</p>
+                    </form>
+                </div>
+
+                <div class="dashboard-card card-span-2">
+                    <div class="section-header">
+                        <div>
+                            <p class="eyebrow">Insights</p>
+                            <h3>Trip mix and monthly activity</h3>
+                        </div>
+                    </div>
+                    <div class="insight-grid">
+                        <div class="mini-chart-card">
+                            <p class="mini-chart-title">Vehicle Type Split</p>
+                            <div id="user-type-distribution" class="distribution-list">
+                                <p class="inline-empty">Your booking mix will appear here once you have trips.</p>
+                            </div>
+                        </div>
+                        <div class="mini-chart-card">
+                            <p class="mini-chart-title">Recent booking pace</p>
+                            <div id="user-monthly-chart" class="bar-chart">
+                                <p class="inline-empty">Monthly activity will appear here once you have bookings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="section-header">
+                        <div>
+                            <p class="eyebrow">Activity</p>
+                            <h3>Recent timeline</h3>
+                        </div>
+                    </div>
+                    <div id="user-activity-timeline" class="activity-timeline">
+                        <p class="inline-empty">Your latest booking activity will appear here.</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-card card-span-3">
+                    <div class="section-header">
+                        <div>
+                            <p class="eyebrow">My Bookings</p>
+                            <h3>Filter and review reservations</h3>
+                        </div>
+                    </div>
+                    <div class="dashboard-toolbar">
+                        <div class="toolbar-field">
+                            <label for="user-booking-filter">Show</label>
+                            <select id="user-booking-filter">
+                                <option value="all">All bookings</option>
+                                <option value="upcoming">Upcoming</option>
+                                <option value="confirmed">Confirmed</option>
+                                <option value="pending">Pending</option>
+                                <option value="past">Past trips</option>
+                            </select>
+                        </div>
+                        <div class="toolbar-field toolbar-grow">
+                            <label for="user-booking-search">Search</label>
+                            <input type="text" id="user-booking-search" placeholder="Search by vehicle or agency">
+                        </div>
+                    </div>
+                    <div class="booking-list" id="booking-list-container"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

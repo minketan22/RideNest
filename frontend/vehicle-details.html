@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Vehicle - RideNest</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-dashboard">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">RideNest</a>
+            </div>
+            <ul class="nav-links" id="nav-links"></ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="vehicle-details-grid">
+                <div class="vehicle-details-card">
+                    <img src="assets/placeholder.jpg" alt="Vehicle Image" id="vehicle-image" class="card-image">
+                    <div class="card-content">
+                        <h2 id="vehicle-name">Loading...</h2>
+                        <p id="vehicle-agency">Agency: Loading...</p>
+                        <p id="vehicle-location">Location: Loading...</p>
+                        <p id="vehicle-description">Description: Loading...</p>
+                        <p class="price" id="vehicle-price-day">Rs. ... / day</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Book This Vehicle</h3>
+                    <form class="auth-form" id="booking-details-form">
+                        <div class="form-group-full">
+                            <label for="start-date">Start Date</label>
+                            <input type="date" id="start-date" required>
+                        </div>
+                        <div class="form-group-full">
+                            <label for="end-date">End Date</label>
+                            <input type="date" id="end-date" required>
+                        </div>
+                        <div class="form-group-full">
+                            <label for="pickup-time">Pickup Time</label>
+                            <input type="time" id="pickup-time" required>
+                        </div>
+                        <div class="booking-summary">
+                            <h4>Total Days: <span id="total-days">0</span></h4>
+                            <h4>Total Price: <span class="price" id="total-price">Rs. 0</span></h4>
+                        </div>
+                        <button type="button" class="btn-primary" id="pay-online-btn">Book & Pay Online</button>
+                        <button type="button" class="btn-secondary" id="pay-later-btn">Book & Pay on Pickup</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
